@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    background: linear-gradient(140deg,rgb(6, 0, 7),rgba(134, 13, 174, 0.063));
+    color: lawngreen;
+    position: fixed;
+    bottom: 0;
+    
+   
+}
+.container{
+    background-image: url(../assets/moon-2048727_1920.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    padding: 50px;
+    font-family: 'Caveat', cursive;
+font-family: 'Space Grotesk', sans-serif;
+min-width: 320px;
+
+}
+.myapp{
+    max-width: 970px;
+margin: 100px auto 20px;
+padding: 10px;
+border-width: 2px;
+border-color: black;
+border-style: solid;
+border-radius: 15px;
+background:linear-gradient(140deg,rgba(255, 255, 255, 0.65) ,rgba(238, 238, 238, 0.7) , rgba(255, 255, 255, 0.65)
+);
+text-align: center;
+}
+h2{
+    padding: 10px 0px 30px;
+    color: rgb(15, 23, 2);
+}
+.typing{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-color: 3px;
+    
+}
+.writehere{
+    width: 70%;
+    border-radius: 15px 0px 0px 15px;
+    border-right: 0px;
+    border-width: 2px;
+    cursor:alias;
+    
+}
+.typing button{
+    width: 10%;
+    height: 35px;
+    border-radius: 0px 15px 15px 0px;
+    border-left: 0px;
+    border-width: 2px;
+    cursor: pointer;
+    
+}
+.myapp ul{
+list-style: none;
+text-align: left;
+margin: 20px auto;
+font-size: larger;
+user-select: none;
+cursor:pointer;
+position: relative;
+color: rgb(98, 0, 255);
+
+
+}
+ul li{
+    padding:2px ;
+    word-wrap:break-word;
+    
+
+}
+ul li:hover{
+    font-size: xx-large;
+}
+.list{
+    max-width: 776px;
+}
+ul li img{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px; 
+   
+}
+ul li img:hover{
+    transform: scale(2,2);
+}
+ul li::before{
+    content: '';
+    background-image: url(../assets/stop.png);
+    background-size: cover;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px 0px 0px;
+}
+ul li.done{
+    text-decoration: line-through;
+    color: rgba(67, 8, 217, 0.476);
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(220, 20, 60, 0.626);
+}
+ul li.done::before{
+    background-image: url(../assets/checked.png);
+}
+@media screen and (max-width: 520px){
+    footer{font-size: smaller;}
+}

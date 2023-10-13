@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <title>To-do-list</title>
+</head>
+<header>
+    <nav>
+    </nav>
+</header>
+<body>
+<div class="container">
+    <div class="myapp">
+        <h2>Life is hard, but let's get on with it!! <img src="assets/time.png" width="30px" > </h2>
+        <div class="typing">
+            <input class="writehere" type="text" placeholder="Please write any errands here">
+            <button onclick="addItem()">+</button>
+            
+        </div>
+        <ul class="list">
+
+<!-- <li>hit the gym</li>
+<li class="done">go shopping</li> -->
+        </ul>
+
+    </div>
+
+</div>
+<footer><%- include("./footer") %></footer>
+
+<link rel="stylesheet" href="css/style.css">
+<!-- or preview only, remove when finish -->
+<!-- <link rel="stylesheet" href="../public/css/style.css"> -->
+<script src="script.js"></script>
+</body>
+</html>
