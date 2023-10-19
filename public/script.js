@@ -3,6 +3,13 @@ const list = document.querySelector(".list");
 
 display();
 
+document.addEventListener("click",(e)=>{
+    if(e.target.tagName == "LI"){
+    e.target.classList.toggle("done");
+    }
+   
+})
+
 function addItem(){
 if(input.value == ""){
     alert("Please add any errand in the input box :)")
@@ -17,9 +24,6 @@ if(input.value == ""){
     createRemoveButton.setAttribute("width","20px");
     createRemoveButton.classList.add("removeButton");
     newItem.appendChild(createRemoveButton);
-    newItem.addEventListener("click",()=> {
-        list.appendChild(createListItem).classList.toggle("done")
-      })
  
 }
 save();
