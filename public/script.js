@@ -1,6 +1,8 @@
 const input = document.querySelector(".writehere");
 const list = document.querySelector(".list");
 
+display();
+
 function addItem(){
 if(input.value == ""){
     alert("Please add any errand in the input box :)")
@@ -20,11 +22,13 @@ if(input.value == ""){
       })
  
 }
+save();
 }
 document.addEventListener("click",(e)=>{
     if(e.target.className == "removeButton"){
     e.target.parentElement.remove();
     }
+    save();
 })
 
 
@@ -32,3 +36,9 @@ document.addEventListener("keypress",()=>{
    
     document.querySelector(".writehere").focus()
 })
+function save(){
+    localStorage.setItem("task" , list.innerHTML);
+}
+function display(){
+    list.innerHTML = localStorage.getItem("task");
+}
